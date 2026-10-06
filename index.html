@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSSHOT Hotel | Hashamat va Qulaylik Maskani</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C5A880',
+                        darkGold: '#A3855E',
+                        hotelDark: '#121212',
+                        hotelCard: '#1E1E1E'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-hotelDark text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-hotelDark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-wider text-white flex items-center gap-2">
+                <i class="fa-solid fa-hotel text-gold"></i> SSSHOT<span class="text-gold">.</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#home" class="hover:text-gold transition-colors">Bosh sahifa</a>
+                <a href="#about" class="hover:text-gold transition-colors">Biz haqimizda</a>
+                <a href="#rooms" class="hover:text-gold transition-colors">Xonalar</a>
+                <a href="#amenities" class="hover:text-gold transition-colors">Qulayliklar</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Aloqa</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#booking"
+                    class="bg-gold hover:bg-darkGold text-black font-semibold px-6 py-2.5 rounded-full transition-all shadow-lg shadow-gold/20">
+                    Bron qilish
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-hotelCard border-b border-white/10 px-6 py-4 space-y-3">
+            <a href="#home" class="block hover:text-gold">Bosh sahifa</a>
+            <a href="#about" class="block hover:text-gold">Biz haqimizda</a>
+            <a href="#rooms" class="block hover:text-gold">Xonalar</a>
+            <a href="#amenities" class="block hover:text-gold">Qulayliklar</a>
+            <a href="#contact" class="block hover:text-gold">Aloqa</a>
+            <a href="#booking" class="block text-center bg-gold text-black font-semibold py-2 rounded-full mt-2">Bron
+                qilish</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-4xl mx-auto text-center px-6 mt-16">
+            <span class="text-gold uppercase tracking-[0.3em] text-sm font-semibold mb-4 inline-block">Hashamatli Dam
+                olish Maskani</span>
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                Unutilmas Taassurotlar <span class="text-gold">SSSHOT</span> Mehmonxonasida
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
+                Sizning qulayligingiz bizning oliy maqsadimiz. Yuqori darajadagi xizmatlar va betakror muhit sizni
+                kutmoqda.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#rooms"
+                    class="w-full sm:w-auto bg-gold hover:bg-darkGold text-black font-bold px-8 py-4 rounded-full transition-all shadow-xl shadow-gold/20">
+                    Xonalarni Ko'rish
+                </a>
+                <a href="#about"
+                    class="w-full sm:w-auto border border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded-full transition-all">
+                    Batafsil Ma'lumot
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK BOOKING BAR -->
+    <section class="relative z-20 max-w-6xl mx-auto px-6 -mt-16">
+        <div class="bg-hotelCard border border-white/10 p-6 md:p-8 rounded-2xl shadow-2xl backdrop-blur-md">
+            <form id="quick-booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Kelish sanasi</label>
+                    <input type="date"
+                        class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Ketish sanasi</label>
+                    <input type="date"
+                        class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Mehmonlar</label>
+                    <select
+                        class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold">
+                        <option>1 Mehmon (1 Xona)</option>
+                        <option>2 Mehmon (1 Xona)</option>
+                        <option>3+ Mehmon (2 Xona)</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button type="submit"
+                        class="w-full bg-gold hover:bg-darkGold text-black font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-gold/10 mt-2 sm:mt-0">
+                        Bo'sh joyni topish
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+                alt="Hotel Interior"
+                class="rounded-2xl shadow-2xl border border-white/10 w-full object-cover h-[450px]">
+            <div
+                class="absolute -bottom-8 -right-8 bg-hotelCard border border-gold/30 p-6 rounded-2xl hidden sm:block shadow-2xl max-w-xs">
+                <div class="flex items-center gap-4">
+                    <span class="font-serif text-4xl text-gold font-bold">15+</span>
+                    <p class="text-sm text-gray-300">Yillik tajriba va mukammal xizmat ko'rsatish standarti</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-3 inline-block">Biz
+                haqimizda</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-6 leading-snug">
+                Sizga shinamlik va o'zgacha qulaylik taqdim etamiz
+            </h2>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+                SSSHOT Hotel shahar markazida joylashgan bo'lib, o'zining zamonaviy arxitekturasi, yuqori darajadagi
+                xizmat ko'rsatish servisi va tinch muhiti bilan ajralib turadi. Biz har bir mehmonimiz uchun uyidagidek
+                iliq va shinam muhit yaratishga intilamiz.
+            </p>
+            <div class="grid grid-cols-2 gap-6 mb-8">
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-gold text-xl mt-1"></i>
+                    <div>
+                        <h4 class="font-semibold text-white">24/7 Xizmat</h4>
+                        <p class="text-xs text-gray-400">Doimiy yordam va xizmatlar</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-gold text-xl mt-1"></i>
+                    <div>
+                        <h4 class="font-semibold text-white">Mazali Taomlar</h4>
+                        <p class="text-xs text-gray-400">Dunyo oshxonasi restoranlari</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact"
+                class="inline-flex items-center gap-2 text-gold font-semibold hover:text-white transition-colors">
+                Bog'lanish <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ROOMS SECTION -->
+    <section id="rooms" class="py-24 bg-hotelCard/50 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-3 inline-block">Bizning
+                    xonalarimiz</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">Dam olishingiz uchun eng yaxshi
+                    tanlovlar</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room Card 1 -->
+                <div
+                    class="bg-hotelCard border border-white/10 rounded-2xl overflow-hidden group hover:border-gold/50 transition-all duration-300 shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80"
+                            alt="Deluxe Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-hotelDark/80 backdrop-blur-md text-gold px-3 py-1 rounded-full text-sm font-semibold border border-white/10">$150
+                            / kecha</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Deluxe King Xona</h3>
+                        <p class="text-gray-400 text-sm mb-4">Katta yotoq, shahar manzarasi, yuqori tezlikdagi Wi-Fi va
+                            dush kabinasi.</p>
+                        <div
+                            class="flex items-center justify-between border-t border-white/10 pt-4 text-xs text-gray-400">
+                            <span><i class="fa-solid fa-user-group text-gold mr-1"></i> 2 Mehmon</span>
+                            <span><i class="fa-solid fa-expand text-gold mr-1"></i> 35 m²</span>
+                            <a href="#booking"
+                                class="bg-gold/10 hover:bg-gold text-gold hover:text-black font-semibold px-4 py-2 rounded-xl transition-all">Band
+                                qilish</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div
+                    class="bg-hotelCard border border-white/10 rounded-2xl overflow-hidden group hover:border-gold/50 transition-all duration-300 shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80"
+                            alt="Suite Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-hotelDark/80 backdrop-blur-md text-gold px-3 py-1 rounded-full text-sm font-semibold border border-white/10">$280
+                            / kecha</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Executive Suite</h3>
+                        <p class="text-gray-400 text-sm mb-4">Alohida mehmonxona xonasi, jakuzi, premium dizayn va
+                            balkon.</p>
+                        <div
+                            class="flex items-center justify-between border-t border-white/10 pt-4 text-xs text-gray-400">
+                            <span><i class="fa-solid fa-user-group text-gold mr-1"></i> 3 Mehmon</span>
+                            <span><i class="fa-solid fa-expand text-gold mr-1"></i> 60 m²</span>
+                            <a href="#booking"
+                                class="bg-gold/10 hover:bg-gold text-gold hover:text-black font-semibold px-4 py-2 rounded-xl transition-all">Band
+                                qilish</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div
+                    class="bg-hotelCard border border-white/10 rounded-2xl overflow-hidden group hover:border-gold/50 transition-all duration-300 shadow-xl">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+                            alt="Presidential Suite"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-hotelDark/80 backdrop-blur-md text-gold px-3 py-1 rounded-full text-sm font-semibold border border-white/10">$500
+                            / kecha</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Presidential Suite</h3>
+                        <p class="text-gray-400 text-sm mb-4">Hashamat cho'qqisi: shaxsiy basseyn, terrassa va shaxsiy
+                            butler xizmati.</p>
+                        <div
+                            class="flex items-center justify-between border-t border-white/10 pt-4 text-xs text-gray-400">
+                            <span><i class="fa-solid fa-user-group text-gold mr-1"></i> 4 Mehmon</span>
+                            <span><i class="fa-solid fa-expand text-gold mr-1"></i> 120 m²</span>
+                            <a href="#booking"
+                                class="bg-gold/10 hover:bg-gold text-gold hover:text-black font-semibold px-4 py-2 rounded-xl transition-all">Band
+                                qilish</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMENITIES SECTION -->
+    <section id="amenities" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span
+                class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-3 inline-block">Qulayliklar</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">Sizning qulayligingiz uchun barcha
+                sharoitlar</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+                class="bg-hotelCard border border-white/10 p-8 rounded-2xl text-center hover:border-gold/50 transition-all">
+                <div
+                    class="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                    <i class="fa-solid fa-person-swimming"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Ochiq Basseyn</h3>
+                <p class="text-gray-400 text-sm">Isitiladigan suv va dam olish zonalari bilan.</p>
+            </div>
+            <div
+                class="bg-hotelCard border border-white/10 p-8 rounded-2xl text-center hover:border-gold/50 transition-all">
+                <div
+                    class="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">SPA & Wellness</h3>
+                <p class="text-gray-400 text-sm">Professional massaj va tana parvarishi xizmatlari.</p>
+            </div>
+            <div
+                class="bg-hotelCard border border-white/10 p-8 rounded-2xl text-center hover:border-gold/50 transition-all">
+                <div
+                    class="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Premium Restoran</h3>
+                <p class="text-gray-400 text-sm">Dunyoning eng mashhur oshpazlari taomlari.</p>
+            </div>
+            <div
+                class="bg-hotelCard border border-white/10 p-8 rounded-2xl text-center hover:border-gold/50 transition-all">
+                <div
+                    class="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Fitness Markazi</h3>
+                <p class="text-gray-400 text-sm">Eng so'nggi rusumdagi trenajyorlar bilan jihozlangan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="py-24 bg-hotelCard/50 border-y border-white/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-3 inline-block">Online
+                    Bron</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">Xonani Hozanoq Band Qiling</h2>
+            </div>
+
+            <form id="main-booking-form"
+                class="bg-hotelCard border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Ism va Familiya</label>
+                        <input type="text" required placeholder="Alisher Navoiy"
+                            class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Telefon raqam</label>
+                        <input type="tel" required placeholder="+998 90 123 45 67"
+                            class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Xona turi</label>
+                        <select
+                            class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                            <option>Deluxe King Xona ($150)</option>
+                            <option>Executive Suite ($280)</option>
+                            <option>Presidential Suite ($500)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Kelish sanasi</label>
+                        <input type="date" required
+                            class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Ketish sanasi</label>
+                        <input type="date" required
+                            class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Qo'shimcha istaklar
+                        (Ixtiyoriy)</label>
+                    <textarea rows="4" placeholder="Maxsus talablar yoki transfer xizmati kerak bo'lsa yozing..."
+                        class="w-full bg-hotelDark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-gold"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-gold hover:bg-darkGold text-black font-bold py-4 rounded-xl transition-all shadow-xl shadow-gold/20 text-lg">
+                    Bronni Tasdiqlash
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold mb-3 inline-block">Bog'lanish</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Savollaringiz bormi? Biz bilan
+                bog'laning</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed">
+                Har qanday savol yoki maxsus takliflar bo'yicha bizning jamoamizga murojaat qilishingiz mumkin. Sizga
+                tez fursatda javob beramiz.
+            </p>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold">Manzil</h4>
+                        <p class="text-gray-400 text-sm">Amir Temur ko'chasi 15-uy, Toshkent</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold">Telefon</h4>
+                        <p class="text-gray-400 text-sm">+998 (71) 200-00-00</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold">Email</h4>
+                        <p class="text-gray-400 text-sm">booking@ssshotel.uz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-hotelCard border border-white/10 p-8 rounded-3xl shadow-2xl">
+            <h3 class="font-serif text-2xl font-bold text-white mb-6">Xabar yuborish</h3>
+            <form id="contact-form" class="space-y-4">
+                <input type="text" required placeholder="Ismingiz"
+                    class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                <input type="email" required placeholder="Email manzilingiz"
+                    class="w-full bg-hotelDark border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold">
+                <textarea required rows="4" placeholder="Xabaringiz..."
+                    class="w-full bg-hotelDark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-gold"></textarea>
+                <button type="submit"
+                    class="w-full bg-gold hover:bg-darkGold text-black font-bold py-3.5 rounded-xl transition-all">
+                    Xabarni yuborish
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-hotelCard border-t border-white/10 py-12">
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <a href="#"
+                    class="font-serif text-2xl font-bold tracking-wider text-white flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <i class="fa-solid fa-hotel text-gold"></i> SSSHOT<span class="text-gold">.</span>
+                </a>
+                <p class="text-xs text-gray-500">© 2026 SSSHOT Hotel. Barcha huquqlar himoyalangan.</p>
+            </div>
+            <div class="flex items-center gap-6 text-xl text-gray-400">
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobil menyuni ochish/yopish
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sahifa bo'ylab harlanganda Navbar foniga soya va shaffoqlik berish
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-hotelDark/95', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-hotelDark/95', 'shadow-lg');
+            }
+        });
+
+        // Forma yuborilgandagi oddiy xabarnoma (Alert o'rniga zamonaviy usul)
+        document.getElementById('main-booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Tabriklaymiz! SSSHOT Hotel xonasi muvaffaqiyatli band qilindi. Tez orada operatorlarimiz siz bilan bog\'lanishadi.');
+            e.target.reset();
+        });
+
+        document.getElementById('quick-booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Bo\'sh xonalar tekshirilmoqda...');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Xabaringiz qabul qilindi! Rahmat.');
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>
