@@ -1,312 +1,389 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iStore - Premium iPhone Shop & Official Reseller</title>
+    <title>Mening Vazifalarim - Zamonaviy To-Do</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-slate-50 text-slate-800 font-sans selection:bg-blue-600 selection:text-white">
-
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="index.html" class="text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/30">
-                    <i class="fa-brands fa-apple text-xl"></i>
-                </div>
-                <span>iStore</span>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
-                <a href="index.html" class="text-blue-600 font-semibold nav-home">Bosh sahifa</a>
-                <a href="catalog.html" class="hover:text-blue-600 transition nav-catalog">Katalog</a>
-                <a href="contact.html" class="hover:text-blue-600 transition nav-contact">Aloqa</a>
-            </nav>
-
-            <!-- Actions (Language Switcher & Cart) -->
-            <div class="flex items-center gap-4">
-                <!-- Language Selector -->
-                <select id="langSwitch" class="bg-slate-100 border border-slate-300 text-sm rounded-lg px-3.5 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium cursor-pointer">
-                    <option value="uz" selected>O'zbekcha</option>
-                    <option value="ru">Русский</option>
-                    <option value="en">English</option>
-                </select>
-
-                <!-- Cart Button -->
-                <a href="cart.html" class="relative bg-slate-100 hover:bg-slate-200 p-3 rounded-full transition text-slate-700">
-                    <i class="fa-solid fa-cart-shopping text-lg"></i>
-                    <span id="cartBadge" class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold hidden shadow-md">0</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative bg-slate-900 text-white py-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="inline-flex items-center gap-2 bg-blue-600/20 text-blue-400 border border-blue-500/30 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full hero-badge">
-                    <i class="fa-solid fa-bolt"></i> Rasmiy diler va Kafolat
-                </span>
-                <h1 class="text-4xl sm:text-6xl font-black tracking-tight hero-title leading-tight">Kelajak texnologiyasi qo'lingizda</h1>
-                <p class="text-slate-400 text-lg hero-desc leading-relaxed">Eng yangi iPhone modellari, rasmiy kafolat, eng hamyonbop narxlar va professional xizmat ko'rsatish faqat bizda.</p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="catalog.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-blue-600/30 hero-btn flex items-center gap-2">
-                        Katalogga o'tish <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="contact.html" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-6 py-4 rounded-xl transition hero-contact-btn">
-                        Bog'lanish
-                    </a>
-                </div>
-            </div>
-            <!-- Hero iPhone Real Image Container (Full filled & Large) -->
-            <div class="flex justify-center">
-                <div class="relative w-full max-w-lg bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-slate-700 shadow-2xl flex flex-col items-center justify-center text-center overflow-hidden">
-                    <div class="absolute -top-3 -right-3 bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg z-10">NEW</div>
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-naturaltitanium?wid=800&hei=800&fmt=p-jpg&qlt=80&.v=1725345758379" alt="iPhone 16 Pro Max" class="w-full h-80 object-contain drop-shadow-2xl mb-6 hover:scale-105 transition duration-500">
-                    <h3 class="text-2xl font-black text-white mb-1">iPhone 16 Pro Max</h3>
-                    <p class="text-slate-400 text-sm mb-6">Titanium dizayn va A18 Pro chip</p>
-                    <a href="catalog.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition">Batafsil ko'rish</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex items-start gap-5">
-                <div class="bg-blue-50 text-blue-600 p-4 rounded-xl text-2xl"><i class="fa-solid fa-shield-halved"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg mb-1 f-title-1">1 Yillik Rasmiy Kafolat</h3>
-                    <p class="text-slate-500 text-sm f-desc-1 leading-relaxed">Barcha mahsulotlarimizga rasmiy servis markazi kafolati beriladi.</p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex items-start gap-5">
-                <div class="bg-blue-50 text-blue-600 p-4 rounded-xl text-2xl"><i class="fa-solid fa-truck-fast"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg mb-1 f-title-2">Tezkor yetkazib berish</h3>
-                    <p class="text-slate-500 text-sm f-desc-2 leading-relaxed">Toshkent shahar bo'ylab 3 soat ichida mutlaqo bepul yetkazamiz.</p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex items-start gap-5">
-                <div class="bg-blue-50 text-blue-600 p-4 rounded-xl text-2xl"><i class="fa-solid fa-headset"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg mb-1 f-title-3">24/7 Qo'llab-quvvatlash</h3>
-                    <p class="text-slate-500 text-sm f-desc-3 leading-relaxed">Savollaringiz bormi? Mutaxassislarimiz har doim yordamga tayyor.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Products Preview Section with Large Full-Filled iPhone Images -->
-    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-end mb-8">
-            <div>
-                <span class="text-blue-600 font-bold uppercase tracking-wider text-xs pop-subtitle">Tavsiya etamiz</span>
-                <h2 class="text-3xl font-black text-slate-900 pop-title mt-1">Mashhur modellar</h2>
-            </div>
-            <a href="catalog.html" class="text-blue-600 font-semibold hover:underline flex items-center gap-1 pop-all">Barchasini ko'rish <i class="fa-solid fa-chevron-right text-xs"></i></a>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Product 1 -->
-            <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col">
-                <div class="h-64 bg-slate-50 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden p-2">
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-deserttitanium?wid=600&hei=600&fmt=p-jpg&qlt=80&.v=1725345759160" alt="iPhone 16 Pro Max" class="w-full h-full object-contain hover:scale-110 transition duration-300">
-                    <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-md shadow">PRO</span>
-                </div>
-                <h3 class="font-bold text-slate-900 text-lg mb-1">iPhone 16 Pro Max</h3>
-                <p class="text-slate-500 text-xs mb-3">256GB / Desert Titanium</p>
-                <div class="flex items-center justify-between mt-auto">
-                    <span class="text-blue-600 font-black text-xl">\$1,299</span>
-                    <a href="catalog.html" class="bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-800 font-semibold px-4 py-2.5 rounded-xl transition pop-btn text-sm">Sotib olish</a>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col">
-                <div class="h-64 bg-slate-50 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden p-2">
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=600&hei=600&fmt=p-jpg&qlt=80&.v=1725567357733" alt="iPhone 16" class="w-full h-full object-contain hover:scale-110 transition duration-300">
-                    <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-md shadow">NEW</span>
-                </div>
-                <h3 class="font-bold text-slate-900 text-lg mb-1">iPhone 16</h3>
-                <p class="text-slate-500 text-xs mb-3">128GB / Ultramarine</p>
-                <div class="flex items-center justify-between mt-auto">
-                    <span class="text-blue-600 font-black text-xl">\$899</span>
-                    <a href="catalog.html" class="bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-800 font-semibold px-4 py-2.5 rounded-xl transition pop-btn text-sm">Sotib olish</a>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col">
-                <div class="h-64 bg-slate-50 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden p-2">
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=600&hei=600&fmt=p-jpg&qlt=80&.v=1692925509489" alt="iPhone 15 Pro" class="w-full h-full object-contain hover:scale-110 transition duration-300">
-                </div>
-                <h3 class="font-bold text-slate-900 text-lg mb-1">iPhone 15 Pro</h3>
-                <p class="text-slate-500 text-xs mb-3">128GB / Black Titanium</p>
-                <div class="flex items-center justify-between mt-auto">
-                    <span class="text-blue-600 font-black text-xl">\$999</span>
-                    <a href="catalog.html" class="bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-800 font-semibold px-4 py-2.5 rounded-xl transition pop-btn text-sm">Sotib olish</a>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col">
-                <div class="h-64 bg-slate-50 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden p-2">
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-starlight?wid=600&hei=600&fmt=p-jpg&qlt=80&.v=1661027961448" alt="iPhone 14" class="w-full h-full object-contain hover:scale-110 transition duration-300">
-                </div>
-                <h3 class="font-bold text-slate-900 text-lg mb-1">iPhone 14</h3>
-                <p class="text-slate-500 text-xs mb-3">128GB / Starlight</p>
-                <div class="flex items-center justify-between mt-auto">
-                    <span class="text-blue-600 font-black text-xl">\$699</span>
-                    <a href="catalog.html" class="bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-800 font-semibold px-4 py-2.5 rounded-xl transition pop-btn text-sm">Sotib olish</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-12 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2 text-xl font-bold text-slate-900">
-                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm">
-                    <i class="fa-brands fa-apple"></i>
-                </div>
-                <span>iStore</span>
-            </div>
-            <p class="text-slate-500 text-sm footer-copy">&copy; 2026 iStore. Barcha huquqlar himoyalangan.</p>
-            <div class="flex gap-6 text-slate-500 text-lg">
-                <a href="#" class="hover:text-blue-600 transition"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#" class="hover:text-blue-600 transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Multilanguage & Logic script -->
-    <script>
-        const translations = {
-            uz: {
-                navHome: "Bosh sahifa",
-                navCatalog: "Katalog",
-                navContact: "Aloqa",
-                heroBadge: "Rasmiy diler va Kafolat",
-                heroTitle: "Kelajak texnologiyasi qo'lingizda",
-                heroDesc: "Eng yangi iPhone modellari, rasmiy kafolat, eng hamyonbop narxlar va professional xizmat ko'rsatish faqat bizda.",
-                heroBtn: "Katalogga o'tish",
-                heroContactBtn: "Bog'lanish",
-                fTitle1: "1 Yillik Rasmiy Kafolat",
-                fDesc1: "Barcha mahsulotlarimizga rasmiy servis markazi kafolati beriladi.",
-                fTitle2: "Tezkor yetkazib berish",
-                fDesc2: "Toshkent shahar bo'ylab 3 soat ichida mutlaqo bepul yetkazamiz.",
-                fTitle3: "24/7 Qo'llab-quvvatlash",
-                fDesc3: "Savollaringiz bormi? Mutaxassislarimiz har doim yordamga tayyor.",
-                popSubtitle: "Tavsiya etamiz",
-                popTitle: "Mashhur modellar",
-                popAll: "Barchasini ko'rish",
-                popBtn: "Sotib olish",
-                footerCopy: "2026 iStore. Barcha huquqlar himoyalangan."
-            },
-            ru: {
-                navHome: "Главная",
-                navCatalog: "Каталог",
-                navContact: "Контакты",
-                heroBadge: "Официальный дилер и Гарантия",
-                heroTitle: "Технологии будущего в ваших руках",
-                heroDesc: "Новейшие модели iPhone, официальная гарантия, лучшие цены и профессиональное обслуживание только у нас.",
-                heroBtn: "Перейти в каталог",
-                heroContactBtn: "Контакты",
-                fTitle1: "1 год официальной гарантии",
-                fDesc1: "На всю продукцию предоставляется гарантия сервисного центра.",
-                fTitle2: "Быстрая доставка",
-                fDesc2: "Бесплатная доставка по Ташкенту в течение 3 часов.",
-                fTitle3: "Поддержка 24/7",
-                fDesc3: "Есть вопросы? Наши специалисты всегда готовы помочь.",
-                popSubtitle: "Рекомендуем",
-                popTitle: "Популярные модели",
-                popAll: "Смотреть все",
-                popBtn: "Купить",
-                footerCopy: "2026 iStore. Все права защищены."
-            },
-            en: {
-                navHome: "Home",
-                navCatalog: "Catalog",
-                navContact: "Contact",
-                heroBadge: "Official Dealer & Warranty",
-                heroTitle: "Future technology in your hands",
-                heroDesc: "The newest iPhone models, official warranty, best prices, and professional service only with us.",
-                heroBtn: "Go to Catalog",
-                heroContactBtn: "Contact Us",
-                fTitle1: "1 Year Official Warranty",
-                fDesc1: "All our products come with official service center warranty.",
-                fTitle2: "Fast Delivery",
-                fDesc2: "Free delivery within Tashkent in 3 hours.",
-                fTitle3: "24/7 Support",
-                fDesc3: "Have questions? Our experts are always ready to help.",
-                popSubtitle: "Recommended",
-                popTitle: "Popular Models",
-                popAll: "View All",
-                popBtn: "Buy Now",
-                footerCopy: "2026 iStore. All rights reserved."
-            }
-        };
-
-        const langSwitch = document.getElementById('langSwitch');
-        
-        function changeLanguage(lang) {
-            localStorage.setItem('site_lang', lang);
-            const t = translations[lang];
-            
-            document.querySelector('.nav-home').textContent = t.navHome;
-            document.querySelector('.nav-catalog').textContent = t.navCatalog;
-            document.querySelector('.nav-contact').textContent = t.navContact;
-            document.querySelector('.hero-badge').innerHTML = `<i class="fa-solid fa-bolt"></i> ${t.heroBadge}`;
-            document.querySelector('.hero-title').textContent = t.heroTitle;
-            document.querySelector('.hero-desc').textContent = t.heroDesc;
-            document.querySelector('.hero-btn').innerHTML = `${t.heroBtn} <i class="fa-solid fa-arrow-right"></i>`;
-            document.querySelector('.hero-contact-btn').textContent = t.heroContactBtn;
-            
-            document.querySelector('.f-title-1').textContent = t.fTitle1;
-            document.querySelector('.f-desc-1').textContent = t.fDesc1;
-            document.querySelector('.f-title-2').textContent = t.fTitle2;
-            document.querySelector('.f-desc-2').textContent = t.fDesc2;
-            document.querySelector('.f-title-3').textContent = t.fTitle3;
-            document.querySelector('.f-desc-3').textContent = t.fDesc3;
-
-            document.querySelector('.pop-subtitle').textContent = t.popSubtitle;
-            document.querySelector('.pop-title').textContent = t.popTitle;
-            document.querySelector('.pop-all').innerHTML = `${t.popAll} <i class="fa-solid fa-chevron-right text-xs"></i>`;
-            
-            document.querySelectorAll('.pop-btn').forEach(btn => {
-                btn.textContent = t.popBtn;
-            });
-
-            document.querySelector('.footer-copy').textContent = t.footerCopy;
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
         }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-slate-50 to-blue-100 min-h-full flex items-center justify-center p-3 sm:p-6">
 
-        langSwitch.addEventListener('change', (e) => {
-            changeLanguage(e.target.value);
+    <!-- Asosiy Konteyner -->
+    <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-3xl w-full max-w-xl p-5 sm:p-8 border border-white/20 transition-all duration-300">
+        
+        <!-- Sarlavha va Statistika -->
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 pb-4 border-b border-gray-100 gap-4">
+            <div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-indigo-600"></i> Vazifalarim
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Bugungi rejalaringizni tartibga soling</p>
+            </div>
+            <div class="flex items-center gap-3 bg-indigo-50/80 px-4 py-2.5 rounded-2xl border border-indigo-100 self-start sm:self-auto">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-semibold text-lg shadow-md shadow-indigo-200" id="task-progress-count">0/0</div>
+                <div>
+                    <div class="text-xs font-medium text-slate-500">Bajarildi</div>
+                    <div class="text-sm font-bold text-slate-700" id="task-progress-text">0%</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Qidiruv paneli -->
+        <div class="relative mb-4">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+                <i class="fa-solid fa-magnifying-glass text-sm"></i>
+            </span>
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Vazifalardan qidirish..." 
+                class="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all text-sm"
+                autocomplete="off"
+            >
+        </div>
+
+        <!-- Vazifa Qo'shish Formasi -->
+        <form id="task-form" class="space-y-3 mb-6">
+            <div class="flex gap-2">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    placeholder="Yangi vazifa kiriting..." 
+                    class="flex-1 px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all text-sm sm:text-base"
+                    autocomplete="off"
+                >
+                <button 
+                    type="submit" 
+                    class="bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white px-5 sm:px-6 py-3 rounded-2xl font-medium transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="hidden sm:inline">Qo'shish</span>
+                </button>
+            </div>
+            
+            <!-- Prioritet tanlash tugmalari -->
+            <div class="flex items-center justify-between pt-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Muhimlik:</span>
+                    <div class="flex gap-1.5" id="priority-selector">
+                        <button type="button" data-priority="past" class="priority-btn px-2.5 py-1 text-xs font-medium rounded-lg bg-emerald-100 text-emerald-700 border border-emerald-200 transition-all hover:bg-emerald-200">Past</button>
+                        <button type="button" data-priority="orta" class="priority-btn px-2.5 py-1 text-xs font-medium rounded-lg bg-amber-100 text-amber-700 border border-amber-200 ring-2 ring-amber-400 transition-all">O'rta</button>
+                        <button type="button" data-priority="yuqori" class="priority-btn px-2.5 py-1 text-xs font-medium rounded-lg bg-rose-100 text-rose-700 border border-rose-200 transition-all hover:bg-rose-200">Yuqori</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Filtr va Tozalash qismi -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mb-6">
+            <!-- Filtr tugmalari -->
+            <div class="flex bg-slate-100 p-1 rounded-2xl gap-1">
+                <button data-filter="all" class="filter-btn flex-1 sm:flex-none px-3 py-1.5 text-xs font-medium rounded-xl text-slate-800 bg-white shadow-sm transition-all">Barchasi</button>
+                <button data-filter="active" class="filter-btn flex-1 sm:flex-none px-3 py-1.5 text-xs font-medium rounded-xl text-slate-600 transition-all">Bajarilmagan</button>
+                <button data-filter="completed" class="filter-btn flex-1 sm:flex-none px-3 py-1.5 text-xs font-medium rounded-xl text-slate-600 transition-all">Bajarilgan</button>
+            </div>
+
+            <!-- Tozalash menyusi (Dropdown yoki Tugmalar) -->
+            <div class="flex items-center gap-2">
+                <button id="clear-completed-btn" title="Bajarilganlarni o'chirish" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 transition-all px-3 py-2 flex items-center justify-center gap-1.5 rounded-xl hover:bg-indigo-50 border border-indigo-100 bg-indigo-50/50">
+                    <i class="fa-solid fa-check-double"></i> Tugallanganlarni tozalash
+                </button>
+                <button id="clear-all-btn" title="Hammasini o'chirish" class="text-xs font-medium text-rose-500 hover:text-rose-700 transition-all px-3 py-2 flex items-center justify-center gap-1.5 rounded-xl hover:bg-rose-50 border border-rose-100 bg-rose-50/30">
+                    <i class="fa-regular fa-trash-can"></i> Hammasi
+                </button>
+            </div>
+        </div>
+
+        <!-- Vazifalar ro'yxati -->
+        <div class="space-y-3 max-h-[350px] overflow-y-auto pr-1" id="task-list">
+            <!-- Dinamik ravishda vazifalar shu yerga qo'shiladi -->
+        </div>
+
+        <!-- Bo'sh holat (Vazifa yo'q bo'lganda) -->
+        <div id="empty-state" class="hidden flex-col items-center justify-center py-10 text-center">
+            <div class="w-16 h-16 bg-indigo-50 text-indigo-400 rounded-full flex items-center justify-center text-2xl mb-3">
+                <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <p class="text-slate-600 font-medium text-sm sm:text-base" id="empty-text">Hozircha vazifalar mavjud emas</p>
+            <p class="text-slate-400 text-xs mt-1">Yangi vazifa qo'shish orqali boshlang</p>
+        </div>
+
+    </div>
+
+    <!-- Maxsus xabar oynasi (Toast) -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50 text-sm">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-msg">Muvaffaqiyatli bajarildi!</span>
+    </div>
+
+    <!-- JavaScript Kodlari -->
+    <script>
+        // Holat (State) o'zgaruvchilari
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let currentFilter = 'all';
+        let currentPriority = 'orta';
+        let searchQuery = '';
+
+        // DOM Elementlari
+        const taskForm = document.getElementById('task-form');
+        const taskInput = document.getElementById('task-input');
+        const searchInput = document.getElementById('search-input');
+        const taskList = document.getElementById('task-list');
+        const emptyState = document.getElementById('empty-state');
+        const emptyText = document.getElementById('empty-text');
+        const priorityButtons = document.querySelectorAll('.priority-btn');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const clearAllBtn = document.getElementById('clear-all-btn');
+        const clearCompletedBtn = document.getElementById('clear-completed-btn');
+        const taskProgressCount = document.getElementById('task-progress-count');
+        const taskProgressText = document.getElementById('task-progress-text');
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-msg');
+
+        // Prioritet tanlash logikasi
+        priorityButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                priorityButtons.forEach(b => {
+                    b.classList.remove('ring-2', 'ring-amber-400', 'ring-emerald-400', 'ring-rose-400');
+                });
+                currentPriority = btn.getAttribute('data-priority');
+                if(currentPriority === 'past') btn.classList.add('ring-2', 'ring-emerald-400');
+                if(currentPriority === 'orta') btn.classList.add('ring-2', 'ring-amber-400');
+                if(currentPriority === 'yuqori') btn.classList.add('ring-2', 'ring-rose-400');
+            });
         });
 
-        const savedLang = localStorage.getItem('site_lang') || 'uz';
-        langSwitch.value = savedLang;
-        changeLanguage(savedLang);
+        // Filtr tugmalarini boshqarish
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-white', 'shadow-sm', 'text-slate-800');
+                    b.classList.add('text-slate-600');
+                });
+                btn.classList.add('bg-white', 'shadow-sm', 'text-slate-800');
+                btn.classList.remove('text-slate-600');
+                currentFilter = btn.getAttribute('data-filter');
+                renderTasks();
+            });
+        });
 
-        function updateCartBadge() {
-            let cart = JSON.parse(localStorage.getItem('istore_cart')) || [];
-            let badge = document.getElementById('cartBadge');
-            if(cart.length > 0) {
-                badge.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
-                badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
+        // Qidiruv paneli hodisasi
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            renderTasks();
+        });
+
+        // Vazifa qo'shish
+        taskForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = taskInput.value.trim();
+            if (!text) return;
+
+            const newTask = {
+                id: Date.now(),
+                text: text,
+                completed: false,
+                priority: currentPriority
+            };
+
+            tasks.unshift(newTask);
+            saveAndRender();
+            taskInput.value = '';
+            showToast("Vazifa muvaffaqiyatli qo'shildi!");
+        });
+
+        // Vazifani o'chirish
+        window.deleteTask = function(id) {
+            tasks = tasks.filter(task => task.id !== id);
+            saveAndRender();
+            showToast("Vazifa o'chirildi!", "fa-circle-exclamation", "text-rose-400");
         }
-        updateCartBadge();
+
+        // Vazifa statusini o'zgartirish (Bajarilgan/Bajarilmagan)
+        window.toggleTask = function(id) {
+            tasks = tasks.map(task => {
+                if (task.id === id) {
+                    return { ...task, completed: !task.completed };
+                }
+                return task;
+            });
+            saveAndRender();
+        }
+
+        // Barcha vazifalarni tozalash ("Hammasi")
+        clearAllBtn.addEventListener('click', () => {
+            if (tasks.length === 0) {
+                showToast("O'chirish uchun vazifalar mavjud emas!", "fa-triangle-exclamation", "text-amber-400");
+                return;
+            }
+            if (confirm("Haqiqatan ham barcha vazifalarni o'chirmoqchimisiz?")) {
+                tasks = [];
+                saveAndRender();
+                showToast("Barcha vazifalar tozalandi!", "fa-circle-exclamation", "text-rose-400");
+            }
+        });
+
+        // Faqat bajarilganlarni tozalash ("Tugallanganlarni tozalash")
+        clearCompletedBtn.addEventListener('click', () => {
+            const completedCount = tasks.filter(t => t.completed).length;
+            if (completedCount === 0) {
+                showToast("Bajarilgan vazifalar topilmadi!", "fa-triangle-exclamation", "text-amber-400");
+                return;
+            }
+            if (confirm(`Bajarilgan ${completedCount} ta vazifani o'chirmoqchimisiz?`)) {
+                tasks = tasks.filter(task => !task.completed);
+                saveAndRender();
+                showToast("Bajarilgan vazifalar tozalandi!", "fa-circle-exclamation", "text-indigo-400");
+            }
+        });
+
+        // LocalStorage ga saqlash va yangilash
+        function saveAndRender() {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+            updateStats();
+        }
+
+        // Statistikalarni yangilash
+        function updateStats() {
+            const total = tasks.length;
+            const completed = tasks.filter(t => t.completed).length;
+            const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
+
+            taskProgressCount.textContent = `${completed}/${total}`;
+            taskProgressText.textContent = `${percentage}%`;
+        }
+
+        // Toast xabarini ko'rsatish
+        function showToast(message, iconClass = "fa-circle-check", iconColor = "text-emerald-400") {
+            toastMsg.textContent = message;
+            const icon = document.getElementById('toast-icon');
+            icon.className = `fa-solid ${iconClass} ${iconColor} text-lg`;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        // Vazifalarni ekranga chiqarish (Render)
+        function renderTasks() {
+            taskList.innerHTML = '';
+
+            // 1. Filtrlash (Barchasi, Bajarilmagan, Bajarilgan)
+            let result = tasks;
+            if (currentFilter === 'active') {
+                result = tasks.filter(t => !t.completed);
+            } else if (currentFilter === 'completed') {
+                result = tasks.filter(t => t.completed);
+            }
+
+            // 2. Qidiruv bo'yicha saralash
+            if (searchQuery !== '') {
+                result = result.filter(t => t.text.toLowerCase().includes(searchQuery));
+            }
+
+            if (result.length === 0) {
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+                if(searchQuery !== '') {
+                    emptyText.textContent = "Qidiruv bo'yicha hech narsa topilmadi";
+                } else if(currentFilter === 'active') {
+                    emptyText.textContent = "Bajarilmagan vazifalar yo'q";
+                } else if(currentFilter === 'completed') {
+                    emptyText.textContent = "Bajarilgan vazifalar yo'q";
+                } else {
+                    emptyText.textContent = "Hozircha vazifalar mavjud emas";
+                }
+            } else {
+                emptyState.classList.remove('flex');
+                emptyState.classList.add('hidden');
+            }
+
+            result.forEach(task => {
+                const item = document.createElement('div');
+                item.className = `group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl border transition-all duration-200 ${
+                    task.completed 
+                        ? 'bg-slate-50/70 border-slate-200 opacity-75' 
+                        : 'bg-white border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-md'
+                }`;
+
+                // Prioritet ranglarini belgilash
+                let priorityBadge = '';
+                if(task.priority === 'past') {
+                    priorityBadge = '<span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-600 border border-emerald-100">Past</span>';
+                } else if(task.priority === 'orta') {
+                    priorityBadge = '<span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-md bg-amber-50 text-amber-600 border border-amber-100">O\'rta</span>';
+                } else if(task.priority === 'yuqori') {
+                    priorityBadge = '<span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-md bg-rose-50 text-rose-600 border border-rose-100">Yuqori</span>';
+                }
+
+                item.innerHTML = `
+                    <div class="flex items-center gap-3.5 flex-1 min-w-0 mr-3">
+                        <button onclick="toggleTask(${task.id})" class="w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all cursor-pointer flex-shrink-0 ${
+                            task.completed 
+                                ? 'bg-indigo-600 border-indigo-600 text-white' 
+                                : 'border-slate-300 hover:border-indigo-500 bg-white'
+                        }">
+                            <i class="fa-solid fa-check text-xs ${task.completed ? 'block' : 'hidden'}"></i>
+                        </button>
+                        <div class="flex flex-col min-w-0">
+                            <span class="text-sm sm:text-base font-medium truncate transition-all ${
+                                task.completed ? 'line-through text-slate-400' : 'text-slate-700'
+                            }">${escapeHtml(task.text)}</span>
+                            <div class="mt-1 flex items-center gap-2">
+                                ${priorityBadge}
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="deleteTask(${task.id})" class="w-9 h-9 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-all opacity-80 sm:opacity-0 group-hover:opacity-100 flex-shrink-0 cursor-pointer">
+                        <i class="fa-regular fa-trash-can text-sm"></i>
+                    </button>
+                `;
+                taskList.appendChild(item);
+            });
+        }
+
+        // Xavfsizlik uchun HTML belgilarini qochirish
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        // Ilk yuklanganda ishga tushirish
+        renderTasks();
+        updateStats();
     </script>
 </body>
 </html>
+```
